@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import hello, { post } from './apis/lambda';
+import logo from '../../../public/image/logo.svg';
+import '../../../public/css/App.css';
+import hello from '../../apis/lambda';
+import { login } from '../../apis/lambda/open';
 
 function App() {
   const [message, setMessage] = useState('');
@@ -12,7 +13,7 @@ function App() {
 
   const handleClick = async () => {
     const message = window.prompt('Type message!');
-    const response = await post(message);
+    const response = await login("1sfsfa23","root");
     alert(JSON.stringify(response, null, 2));
   };
 
