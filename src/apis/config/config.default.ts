@@ -34,5 +34,7 @@ export default (appInfo: EggAppInfo) => {
       logging: false,
   }
 
+  config.secret = "hykj";
+
   return config;
 }

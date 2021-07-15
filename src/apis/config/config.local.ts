@@ -21,6 +21,8 @@ export default (appInfo: EggAppInfo) => {
     csrf: false,
   };
 
+  config.secret = "hykj";
+
   config.orm = {
     type: 'mysql',
       host: '127.0.0.1',

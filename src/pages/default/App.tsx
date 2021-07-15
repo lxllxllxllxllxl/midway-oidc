@@ -13,7 +13,7 @@ function App() {
 
   const handleClick = async () => {
     const message = window.prompt('Type message!');
-    const response = await login("1sfsfa23","root");
+    const response = await login("admin","root");
     alert(JSON.stringify(response, null, 2));
   };
 
