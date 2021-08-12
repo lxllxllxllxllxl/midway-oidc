@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import logo from '../../../public/image/logo.svg';
 import '../../../public/css/App.css';
 import hello from '../../apis/lambda';
-import { login } from '../../apis/lambda/open';
+import { login, register } from '../../apis/lambda/open';
 
 function App() {
   const [message, setMessage] = useState('');
@@ -13,7 +13,12 @@ function App() {
 
   const handleClick = async () => {
     const message = window.prompt('Type message!');
-    const response = await login("admin","root");
+    let data = {
+      name:"11111",
+      pwd:"123234",
+      // phone: ""
+    }
+    const response = await register(data);
     alert(JSON.stringify(response, null, 2));
   };
 
